@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Banner from './Banner';
 import Cart from './Cart';
 import QuestionForm from './QuestionForm';
 import ShoppingList from './ShoppingList';
 import Footer from './Footer';
 import Dress from '../pages/dress';
+import Home from '../pages/home';
+import Nav from './nav';
 
 function App() {
   const savedCart = localStorage.getItem('cart');
@@ -13,19 +17,20 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
   return (
-    <div>
-      <Banner>
-        <img src="" alt="Girl shop logo" className="lmj-logo" />
-        <h1 className="lmj-title">Girl shop</h1>
-      </Banner>
-      <div className="lmj-layout-inner">
-        <Cart cart={cart} updateCart={updateCart} />
-        {/* <ShoppingList cart={cart} updateCart={updateCart} /> */}
-        <Dress />
+    <>
+      <Router>
+        <Banner />
+        <Nav />
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="dress" element={<Dress />} />
+          </Route>
+        </Routes>
         <QuestionForm />
-      </div>
-      <Footer />
-    </div>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
