@@ -1,6 +1,4 @@
 import { dressList } from '../datas/dressList';
-//import CareScale from './CareScale';
-import PlantItem from './PlantItem';
 import '../styles/ShoppingList.css';
 import Categories from './Categories';
 import { useState } from 'react';
@@ -38,13 +36,6 @@ function ShoppingList({ cart, updateCart }) {
         {dressList.map(({ id, cover, name, water, light, price, category }) =>
           !activeCategory || activeCategory === category ? (
             <div key={id}>
-              <PlantItem
-                cover={cover}
-                name={name}
-                water={water}
-                light={light}
-                price={price}
-              />
               <button onClick={() => addToCart(name, price)}>Ajouter</button>
             </div>
           ) : null
