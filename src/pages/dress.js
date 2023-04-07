@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { BsCheckCircle } from 'react-icons/bs';
 import { dressList } from '../datas/dressList';
 import '../styles/Dress.css';
 
@@ -12,8 +13,9 @@ export default function Dress() {
             <div className="dressList__description">
               <p>{dress.name}</p>
               <span>{dress.price} €</span>
-              <FontAwesomeIcon icon="fa-light fa-circle-check" />
-              <i class="fa fa-light fa-circle-check"></i>
+              {/* <FontAwesomeIcon icon="fa-light fa-circle-check" /> */}
+              <i className="fa fa-light fa-circle-check"></i>
+              <BsCheckCircle />
             </div>
           </div>
         );
