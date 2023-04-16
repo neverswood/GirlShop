@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BsCheckCircle } from 'react-icons/bs';
-import { dressList } from '../datas/dressList';
+import { WatchList } from '../datas/watch';
 import '../styles/Dress.css';
 
 export default function Dress() {
   return (
     <div className="dressList">
-      {dressList.map((dress) => {
+      {WatchList.map((dress) => {
         return (
           <div className="dressList__card" key={dress.id}>
             <img src={dress.cover} alt={dress.name}></img>
