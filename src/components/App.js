@@ -6,9 +6,15 @@ import Cart from './Cart';
 import QuestionForm from './QuestionForm';
 import ShoppingList from './ShoppingList';
 import Footer from './Footer';
-import Dress from '../pages/dress';
+// import jewelryList from '../pages/jewelryList';
 import Home from '../pages/home';
 import Nav from './nav';
+import JewelryPage from '../pages/jewelryList';
+import { PendantList } from '../datas/pendant.js';
+import { EarringList } from '../datas/earring';
+import { RingList } from '../datas/ring';
+import { WatchList } from '../datas/watch';
+import { BraceletList } from '../datas/bracelet';
 
 function App() {
   const savedCart = localStorage.getItem('cart');
@@ -24,7 +30,27 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            <Route path="dress" element={<Dress />} />
+            <Route
+              path="pendant"
+              element={<JewelryPage jewelryList={PendantList} />}
+            />
+            <Route
+              path="earring"
+              element={<JewelryPage jewelryList={EarringList} />}
+            />
+            <Route
+              path="ring"
+              element={<JewelryPage jewelryList={RingList} />}
+            />
+            <Route
+              path="watch"
+              element={<JewelryPage jewelryList={WatchList} />}
+            />
+            <Route
+              path="bracelet"
+              element={<JewelryPage jewelryList={BraceletList} />}
+            />
+            <Route path="contact" />
           </Route>
         </Routes>
         <QuestionForm />
