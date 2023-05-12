@@ -7,10 +7,12 @@ export default function Nav() {
     <>
       <nav className="nav">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/dress">Dress</NavLink>
-        <NavLink tp="/top">Top</NavLink>
-        <NavLink to="pant">Pant</NavLink>
-        <NavLink to="shoes">Shoes</NavLink>
+        <NavLink to="pendant">Pendentif</NavLink>
+        <NavLink to="earring">Boucle d'oreille</NavLink>
+        <NavLink to="ring">Bague</NavLink>
+        <NavLink to="watch">Montre</NavLink>
+        <NavLink to="bracelet">Bracelet</NavLink>
+        <NavLink to="contact">Contact</NavLink>
       </nav>
     </>
   );
