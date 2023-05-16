@@ -5,23 +5,133 @@ main {
 }
 
 .listLink {
-  margin: 50px auto;
+  margin: 0 40px;
 }
 
 .homeLink {
-  display: block;
-  width: 1085px;
-  height: 100%;
-  border-radius: 10px;
+  height: 364px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
 }
 
-.homeLink h2 {
+.loyalty-text {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.link-loyalty {
+  text-decoration: none;
+}
+
+.homeLink-fidelity-title {
+  margin: auto;
+  font-size: 65px;
+  color: #5c5c2b;
+}
+
+.homeLink-fidelity-paragraph {
+  font-size: 45px;
+  margin: 30px 20px;
+  color: #707026;
+}
+
+.homeLink-present {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-underline-position: under;
+  color: #25251d;
+  font-size: 54px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 10px;
+  max-width: 250px;
+}
+
+.homeLink h2,
+.homeLink p {
+  font-family: 'Dancing Script', cursive;
+  text-decoration: none;
+}
+
+.homeLink-loyalty {
+  margin: 10px auto;
 }
 
 .homeLink img {
   object-fit: cover;
-  border-radius: 10px;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1280px) {
+  .homeLink-fidelity-title {
+    font-size: 45px;
+  }
+
+  .homeLink-fidelity-paragraph {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .homeLink-present {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 790px) {
+  .listLink {
+    margin: 0 20px;
+  }
+
+  .homeLink {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeLink {
+    margin: 0 auto 5px auto;
+    height: 100%;
+  }
+
+  .homeLink img {
+    height: 180px;
+  }
+
+  .homeLink-fidelity-title {
+    font-size: 38px;
+  }
+
+  .homeLink-fidelity-paragraph {
+    font-size: 25px;
+    margin: 17px 20px;
+  }
+  .homeLink-present {
+    font-size: 25px;
+    max-width: 185px;
+  }
+}
+
+@media (max-width: 434px) {
+  .homeLink-fidelity-title {
+    font-size: 25px;
+  }
+
+  .homeLink-fidelity-paragraph {
+    font-size: 19px;
+  }
 }
