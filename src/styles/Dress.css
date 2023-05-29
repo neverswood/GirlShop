@@ -1,28 +1,28 @@
-.dressList {
+.list {
   display: flex;
   flex-wrap: wrap;
   margin: 50px 219px;
 }
 
-.dressList__card {
+.list__card {
   margin: 20px 30px;
 }
 
-.dressList__card img {
+.list__card img {
   width: 300px;
   height: 330px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.dressList__description {
+.list__description {
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-weight: 600;
 }
 
-.dressList__description p {
+.list__description p {
   color: brown;
   font-size: 18px;
 }
