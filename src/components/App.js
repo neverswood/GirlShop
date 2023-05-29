@@ -2,11 +2,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Banner from './Banner';
-import Cart from './Cart';
-import QuestionForm from './QuestionForm';
-import ShoppingList from './ShoppingList';
 import Footer from './Footer';
-// import jewelryList from '../pages/jewelryList';
 import Home from '../pages/home';
 import Nav from './nav';
 import JewelryPage from '../pages/jewelryList';
@@ -53,7 +49,6 @@ function App() {
             <Route path="contact" />
           </Route>
         </Routes>
-        <QuestionForm />
         <Footer />
       </Router>
     </>
